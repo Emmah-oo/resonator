@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Podcasts = () => {
   return (
-    <section className="my-[8vh] py-[8vh] bg-[#F8F8F8]">
+    <section className="mt-[8vh] py-[8vh] bg-[#F8F8F8]">
       <div className="w-[90%] m-auto lg:w-[70%]">
         <h1 className="text-center text-4xl font-bold">Top podcasts:</h1>
         <h3 className="text-center mt-5">

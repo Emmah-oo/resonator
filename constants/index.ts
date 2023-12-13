@@ -91,3 +91,27 @@ export const essentialEpisodeData = [
     icon: "/Share.svg",
   },
 ];
+
+export const hostsData = [
+  {
+    id: 0,
+    image: '/team-img1.png',
+    name: 'Bella Jimenez',
+    position: 'Creative Strategist',
+    socials: ['/Facebook.svg', '/LinkedIn.svg', '/Twitter.svg']
+  },
+  {
+    id: 1,
+    image: '/team-img2.png',
+    name: 'Edwin Watson',
+    position: 'Creative Strategist',
+    socials: ['/Facebook.svg', '/LinkedIn.svg', '/Twitter.svg']
+  },
+  {
+    id: 2,
+    image: '/team-img3.png',
+    name: 'Caitlin Henderson',
+    position: 'Creative Strategist',
+    socials: ['/Facebook.svg', '/LinkedIn.svg', '/Twitter.svg']
+  }
+]

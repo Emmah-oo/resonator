@@ -4,10 +4,10 @@ import { essentialEpisodeData } from "@/constants";
 
 const Essential = () => {
   return (
-    <section className="mt-[8vh] py-[8vh]">
+    <section className="mt-[2vh] py-[2vh] lg:mt-[8vh] lg:py-[8vh]">
       <div className="w-[90%] m-auto lg:w-[70%]">
         <div className="flex justify-between">
-          <h1 className="font-bold text-2xl lg:text-3xl">Essential Episodes:</h1>
+          <h1 className="font-bold text-xl lg:text-3xl">Essential Episodes:</h1>
           <div className="flex items-center gap-2">
             <h2 className="font-bold">View all episodes</h2>
             <Image src="/Arrow.svg" alt="arrow" height={20} width={20} />

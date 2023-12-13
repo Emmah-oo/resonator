@@ -22,7 +22,7 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  window.addEventListener("scroll", handleNavColor);
+  // window.addEventListener("scroll", handleNavColor);
   return (
     <nav
       className={`fixed top-0 w-[100%] z-10 transition-all ${
