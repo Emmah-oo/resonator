@@ -8,15 +8,30 @@ import { NAV_LINKS } from "@/constants";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [navColor, setNavColor] = useState(false);
+
+  const handleNavColor = () => {
+    if (window.scrollY > 20) {
+      setNavColor(true);
+    } else {
+      setNavColor(false);
+    }
+  };
+
   const handleNav = () => {
     setNav(!nav);
   };
+
+  window.addEventListener("scroll", handleNavColor);
   return (
-    <nav className="fixed top-0 w-[100%] z-10">
+    <nav
+      className={`fixed top-0 w-[100%] z-10 transition-all ${
+        navColor ? "shadow-md bg-white text" : ""
+      }`}
+    >
       <div className="flex justify-between items-center px-8 h-16 w-full">
-      <Image src="/logo.svg" alt="logo" width={74} height={74} />
+        <Image src="/logo.svg" alt="logo" width={74} height={74} />
         <div className="flex gap-4 items-center">
-          
           <ul className="hidden sm:flex">
             {NAV_LINKS.map((link) => (
               <Link href={link.href} key={link.key} className="mx-2">
@@ -37,6 +52,10 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <div className="flex items-center justify-center gap-2">
+              <Image src="search.svg" alt="logo" width={14} height={14} />
+              <h1 className="text-[0.8rem]">Search</h1>
+            </div>
           </ul>
         </div>
 
