@@ -22,7 +22,7 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  // window.addEventListener("scroll", handleNavColor);
+  window.addEventListener("scroll", handleNavColor);
   return (
     <nav
       className={`fixed top-0 w-[100%] z-10 transition-all ${
@@ -30,7 +30,7 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-center px-8 h-16 w-full">
-        <Image src="/logo.svg" alt="logo" width={74} height={74} />
+        <Image src="/header-logo.svg" alt="logo" width={80} height={80} />
         <div className="flex gap-4 items-center">
           <ul className="hidden sm:flex">
             {NAV_LINKS.map((link) => (

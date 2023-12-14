@@ -10,14 +10,14 @@ const Episode = () => {
       <div className="flex flex-col gap-4 w-[100%]">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center p-3">
           <div className="flex flex-col">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-2xl font-bold lg:text-3xl">
               Timmy Mike: The nature of design
             </h1>
             <p className="font-thin text-slate-600">
               Episode 1 . Microphone . 0:13
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center font-semibold gap-2">
             Episode page
             <Image src="/Arrow.svg" alt="arrow" height={20} width={20} />
           </div>
