@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Logo from "../public/logo.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { NAV_LINKS } from "@/constants";
 
@@ -11,18 +11,25 @@ const Navbar = () => {
   const [navColor, setNavColor] = useState(false);
 
   const handleNavColor = () => {
-    if (window.scrollY > 20) {
-      setNavColor(true);
-    } else {
-      setNavColor(false);
+    if (typeof window !== "undefined") {
+      if (window.scrollY > 20) {
+        setNavColor(true);
+      } else {
+        setNavColor(false);
+      }
     }
   };
 
   const handleNav = () => {
     setNav(!nav);
   };
-
-  window.addEventListener("scroll", handleNavColor);
+  useEffect(() => {
+    // Add event listener on mount and remove it on unmount
+    window.addEventListener("scroll", handleNavColor);
+    return () => {
+      window.removeEventListener("scroll", handleNavColor);
+    };
+  }, []);
   return (
     <nav
       className={`fixed top-0 w-[100%] z-10 transition-all ${
