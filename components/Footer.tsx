@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-black text-white">
       <div className="flex flex-col gap-10 p-12 md:flex-row m-auto md:gap-5 lg:w-[70%] lg:p-0 lg:py-[8rem]">
         <div className="flex flex-col w-[30%] gap-1">
-          <Image src="/Logo.svg" alt="logo" width={100} height={100} />
+          <Image src="/Footer-Logo.svg" alt="logo" width={100} height={100} />
           <h2 className="text-[.7rem] font-light text-slate-300">
             The great connection
           </h2>
